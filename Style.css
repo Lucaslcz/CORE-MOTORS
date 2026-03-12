@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2C4A63;
+  font-family: sans-serif;
+  overflow-x: hidden;
+  color: white;
+}
+
+.navbar {
+  background: linear-gradient(to top, #101820, #1A2A38);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 4%;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+#logo {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.links {
+  display: flex;
+  gap: 15px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding-top: 5px;
+  border-top: 2px solid transparent;
+  transition: 0.3s;
+}
+
+.links a:hover {
+  color: #F5921D;
+  border-top: 2px solid #F5921D;
+}
+
+.login {
+  background-color: #009CDE;
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.login:hover {
+  background-color: #F5921D;
+}
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #101820;
+}
+
+.hero-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top, #2C4A63 5%, transparent 90%);
+}
+
+.frase-lapis {
+  color: white;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 3.5rem;
+  text-align: center;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 1);
+  padding: 0 5%;
+  max-width: 800px;
+  line-height: 1;
+  z-index: 5;
+}
+
+.navmain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 10px;
+  width: 100%;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 90%;
+  max-width: 500px;
+}
+
+.main-buttons {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.btn-explorar, .btn-filtrar {
+  flex: 1;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 12px;
+  color: white;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.btn-explorar { background-color: #009CDE; }
+.btn-filtrar { background-color: #F5921D; }
+
+.btn-explorar:hover, .btn-filtrar:hover {
+  transform: scale(1.03);
+}
+
+.secondary-buttons {
+  width: 100%;
+}
+
+.btn-favoritos-home {
+  background-color: #1A2A38;
+  color: #009CDE;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  border: 2px solid #009CDE;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.btn-favoritos-home:hover {
+  background-color: #009CDE;
+  color: white;
+}
+
+.vitrine {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 50px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card-carro {
+  background-color: #1A2A38;
+  padding: 25px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.4s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card-carro:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+}
+
+.card-carro img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 12px 8px rgba(0, 156, 222, 0.3));
+}
+
+.card-carro h3 {
+  color: white;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.slogan {
+  font-size: 12px;
+  padding: 15px 0;
+  color: #abb2b9;
+  text-align: center;
+  min-height: 60px;
+  line-height: 1.4;
+}
+
+.saibamais {
+  background-color: #F5921D;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  width: 100%;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: 0.3s;
+  margin-top: auto;
+}
+
+.saibamais:hover {
+  background-color: #009CDE;
+}
+
+footer {
+  background: linear-gradient(90deg, #1A2A38, #0D161F);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-slogan {
+  font-style: italic;
+  margin-top: 15px;
+  color: #abb2b9;
+}
+
+.copyright {
+  font-size: 12px;
+  margin-top: 20px;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .hero-container { height: 250px; }
+  .frase-lapis { font-size: 2.2rem; }
+  .vitrine { grid-template-columns: 1fr; }
+}

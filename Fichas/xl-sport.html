@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CoreMotors - VW XL Sport</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="fichas.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 id="logo">CoreMotors</h1>
+          <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../explorar.html">Todos</a>
+            <a href="../favorito.html">Favoritos</a>
+          </div>
+          <a class="login" href="../login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-carro">
+        <div class="titulo-carro">
+            <h2>Volkswagen XL Sport</h2>
+        </div>
+
+        <div class="img-container">
+            <img src="../Carrosimg/xl-sport.png" alt="VW XL Sport">
+        </div>
+
+        <div class="descricao-veiculo">
+            <p style="color: #F5921D; font-weight: bold; margin-bottom: 10px;">
+                Um conceito radical que une o carro mais aerodinâmico do mundo ao motor de dois cilindros mais potente da história.
+            </p>
+            <p>
+                O XL Sport utiliza o motor V2 da Ducati 1199 Superleggera. Graças ao uso extensivo de polímeros reforçados com fibra de carbono, o carro mantém um peso baixíssimo, permitindo uma agilidade visceral em altas rotações.
+            </p>
+        </div>
+
+        <table class="tabela-tecnica">
+            <tr><td class="label-spec">Ano/Modelo</td><td class="valor-spec">2014 (Concept)</td></tr>
+            <tr><td class="label-spec">Motor</td><td class="valor-spec">1.2L V2 Ducati Superleggera</td></tr>
+            <tr><td class="label-spec">Potência</td><td class="valor-spec">197 cv</td></tr>
+            <tr><td class="label-spec">Torque</td><td class="valor-spec">13,6 kgfm</td></tr>
+            <tr><td class="label-spec">0 a 100 km/h</td><td class="valor-spec">5,7 segundos</td></tr>
+            <tr><td class="label-spec">Peso</td><td class="valor-spec">890 kg</td></tr>
+            <tr><td class="label-spec">RPM Máximo</td><td class="valor-spec">11.000 rpm</td></tr>
+        </table>
+
+        <button id="btn-favorito" class="btn-contato" onclick="salvarERedirecionar('VW XL Sport', 'Carrosimg/xl-sport.png', 'Fichas/xl-sport.html')">
+            SALVAR NOS FAVORITOS
+        </button>
+
+        <script>
+        function salvarERedirecionar(nome, foto, link) {
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            const botao = document.getElementById('btn-favorito');
+            
+            if (!favoritos.some(c => c.nome === nome)) {
+                favoritos.push({ nome, foto, link });
+                localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            }
+
+            botao.innerHTML = "VER NOS FAVORITOS";
+            botao.style.backgroundColor = "#F5921D";
+
+            setTimeout(() => {
+                window.location.href = "../favorito.html";
+            }, 800);
+        }
+        </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
+        <p class="copyright">&copy; CoreMotors</p>
+      </div>
+    </footer>
+</body>
+</html>

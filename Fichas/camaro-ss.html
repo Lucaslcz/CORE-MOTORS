@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CoreMotors - Chevrolet Camaro SS</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="fichas.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 id="logo">CoreMotors</h1>
+          <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../explorar.html">Todos</a>
+            <a href="../favorito.html">Favoritos</a>
+          </div>
+          <a class="login" href="../login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-carro">
+        <div class="titulo-carro">
+            <h2>Chevrolet Camaro SS</h2>
+        </div>
+
+        <div class="img-container">
+            <img src="../Carrosimg/camaro-ss.png" alt="Chevrolet Camaro SS">
+        </div>
+
+        <div class="descricao-veiculo">
+            <p style="color: #F5921D; font-weight: bold; margin-bottom: 10px;">
+                O Chevrolet Camaro SS é a definição de performance e estilo, unindo a tradição dos muscle cars com tecnologia moderna.
+            </p>
+            <p>
+                Equipado com um motor V8 de alta performance, o Camaro entrega uma aceleração visceral e um ronco inconfundível. Seu design aerodinâmico e interior focado no motorista proporcionam uma experiência de direção emocionante, seja em estradas abertas ou em pistas.
+            </p>
+        </div>
+
+        <table class="tabela-tecnica">
+            <tr><td class="label-spec">Ano/Modelo</td><td class="valor-spec">2023</td></tr>
+            <tr><td class="label-spec">Motor</td><td class="valor-spec">6.2L V8</td></tr>
+            <tr><td class="label-spec">Potência</td><td class="valor-spec">461 cv @ 6.000 rpm</td></tr>
+            <tr><td class="label-spec">Torque</td><td class="valor-spec">62,9 kgfm</td></tr>
+            <tr><td class="label-spec">0 a 100 km/h</td><td class="valor-spec">4,2 segundos</td></tr>
+            <tr><td class="label-spec">Câmbio</td><td class="valor-spec">Automático de 10 marchas</td></tr>
+            <tr><td class="label-spec">Tração</td><td class="valor-spec">Traseira (RWD)</td></tr>
+            <tr><td class="label-spec">Peso</td><td class="valor-spec">1.709 kg</td></tr>
+        </table>
+
+        <button id="btn-favorito" class="btn-contato" onclick="salvarERedirecionar('Chevrolet Camaro SS', 'Carrosimg/camaro.png', 'Fichas/camaro.html')">
+            SALVAR NOS FAVORITOS
+        </button>
+
+        <script>
+        function salvarERedirecionar(nome, foto, link) {
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            const botao = document.getElementById('btn-favorito');
+            
+            if (!favoritos.some(c => c.nome === nome)) {
+                favoritos.push({ nome, foto, link });
+                localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            }
+
+            botao.innerHTML = "VER NOS FAVORITOS";
+            botao.style.backgroundColor = "#F5921D";
+            botao.style.color = "white";
+
+            setTimeout(() => {
+                window.location.href = "../favorito.html";
+            }, 800);
+        }
+        </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
+        <p class="copyright">&copy; CoreMotors</p>
+      </div>
+    </footer>
+</body>
+</html>

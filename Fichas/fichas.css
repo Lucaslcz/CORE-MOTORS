@@ -1,0 +1,113 @@
+.pagina-carro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.titulo-carro {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.titulo-carro h2 {
+    font-size: 28px;
+    color: white;
+}
+
+.img-container {
+    width: 100%;
+    max-width: 500px;
+}
+
+.img-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.descricao-veiculo {
+    width: 100%;
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.tabela-tecnica {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #1A2A38;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabela-tecnica td {
+    padding: 15px;
+    border-bottom: 1px solid #243b4d;
+    color: white;
+}
+
+.label-spec {
+    font-weight: bold;
+    color: #009CDE;
+}
+
+.valor-spec {
+    text-align: right;
+}
+
+.btn-contato {
+    background-color: #1A2A38;
+    color: #009CDE;
+    width: 100%;
+    max-width: 400px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    border: 3px solid #009CDE;
+    border-radius: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-contato:hover {
+    background-color: #009CDE;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    .pagina-carro {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+        padding: 60px 10%;
+        align-items: flex-start;
+    }
+
+    .titulo-carro {
+        text-align: left;
+    }
+
+    .titulo-carro h2 {
+        font-size: 40px;
+    }
+
+    .img-container {
+        flex: 1;
+    }
+
+    .descricao-veiculo {
+        flex: 1;
+        min-width: 300px;
+    }
+}

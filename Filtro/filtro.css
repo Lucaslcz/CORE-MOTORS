@@ -1,0 +1,80 @@
+body {
+    background-color: #1A2A38;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#container-filtro {
+    text-align: center;
+    width: 95%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.btn-laranja {
+    background-color: #F5921D;
+    color: white;
+    border: none;
+    padding: 15px 0; /* Ajustado para preenchimento vertical */
+    width: 100%;    /* Largura total do container pai */
+    max-width: 300px; /* Limite de tamanho para os botões ficarem iguais */
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.2s, background-color 0.2s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-laranja:hover {
+    background-color: #d47d16;
+    transform: scale(1.05);
+}
+
+.opcoes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    align-items: center; /* Centraliza os botões uniformes */
+}
+
+.vitrine-resultados {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card-resultado {
+    background-color: #131f2a;
+    padding: 20px;
+    border-radius: 8px;
+    width: 240px;
+    text-align: center;
+}
+
+.card-resultado img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.fade-in { animation: fadeIn 0.5s forwards; }
+.fade-out { animation: fadeOut 0.5s forwards; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeOut { from { opacity: 1; transform: translateY(0); } to { opacity: 0; transform: translateY(10px); } }

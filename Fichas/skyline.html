@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CoreMotors - Nissan Skyline R34</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="fichas.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 id="logo">CoreMotors</h1>
+          <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../explorar.html">Todos</a>
+            <a href="../favorito.html">Favoritos</a>
+          </div>
+          <a class="login" href="../login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-carro">
+        <div class="titulo-carro">
+            <h2>Nissan Skyline GT-R R34</h2>
+        </div>
+
+        <div class="img-container">
+            <img src="../Carrosimg/skyline-gt-r-r34.png" alt="Nissan Skyline GT-R R34">
+        </div>
+
+        <div class="descricao-veiculo">
+            <p style="color: #F5921D; font-weight: bold; margin-bottom: 10px;">
+                O R34 é o ícone supremo da cultura JDM, famoso por seu domínio nas pistas e sua tecnologia à frente do tempo.
+            </p>
+            <p>
+                Equipado com o indestrutível motor RB26DETT e o sistema de tração ATTESA E-TS Pro, o Skyline R34 tornou-se um mito global, sendo desejado por entusiastas pela sua capacidade infinita de preparação e sua presença marcante.
+            </p>
+        </div>
+
+        <table class="tabela-tecnica">
+            <tr>
+                <td class="label-spec">Ano/Modelo</td>
+                <td class="valor-spec">1999/2002</td>
+            </tr>
+            <tr>
+                <td class="label-spec">Motor</td>
+                <td class="valor-spec">2.6L I6 Biturbo RB26DETT</td>
+            </tr>
+            <tr>
+                <td class="label-spec">Potência</td>
+                <td class="valor-spec">280 cv @ 6.800 rpm</td>
+            </tr>
+            <tr>
+                <td class="label-spec">Torque</td>
+                <td class="valor-spec">40,0 kgfm</td>
+            </tr>
+            <tr>
+                <td class="label-spec">0 a 100 km/h</td>
+                <td class="valor-spec">4,9 segundos</td>
+            </tr>
+            <tr>
+                <td class="label-spec">Câmbio</td>
+                <td class="valor-spec">Manual de 6 marchas Getrag</td>
+            </tr>
+            <tr>
+                <td class="label-spec">Tração</td>
+                <td class="valor-spec">AWD (Integral Inteligente)</td>
+            </tr>
+            <tr>
+                <td class="label-spec">Peso</td>
+                <td class="valor-spec">1.560 kg</td>
+            </tr>
+        </table>
+
+        <button id="btn-favorito" class="btn-contato" onclick="salvarERedirecionar('Nissan Skyline R34', 'Carrosimg/skyline-r34.png', 'Fichas/skyline-r34.html')">
+            SALVAR NOS FAVORITOS
+        </button>
+
+        <script>
+        function salvarERedirecionar(nome, foto, link) {
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            const botao = document.getElementById('btn-favorito');
+            
+            if (!favoritos.some(c => c.nome === nome)) {
+                favoritos.push({ nome, foto, link });
+                localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            }
+
+            botao.innerHTML = "VER NOS FAVORITOS";
+            botao.style.backgroundColor = "#F5921D";
+            botao.style.color = "white";
+            botao.style.borderColor = "#F5921D";
+
+            setTimeout(() => {
+                window.location.href = "../favorito.html";
+            }, 800);
+        }
+        </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
+        <p class="copyright">&copy; CoreMotors</p>
+      </div>
+    </footer>
+</body>
+</html>

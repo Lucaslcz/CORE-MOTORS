@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CoreMotors - Lotus Emeya</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="fichas.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 id="logo">CoreMotors</h1>
+          <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../explorar.html">Todos</a>
+            <a href="../favorito.html">Favoritos</a>
+          </div>
+          <a class="login" href="../login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-carro">
+        <div class="titulo-carro">
+            <h2>Lotus Emeya Hyper-GT</h2>
+        </div>
+
+        <div class="img-container">
+            <img src="../Carrosimg/emeya.png" alt="Lotus Emeya">
+        </div>
+
+        <div class="descricao-veiculo">
+            <p style="color: #F5921D; font-weight: bold; margin-bottom: 10px;">
+                A nova era da Lotus: Poder elétrico com alma de esportivo.
+            </p>
+            <p>
+                O Emeya é um marco na história da Lotus, unindo a dinâmica de condução lendária da marca com tecnologias sustentáveis de ponta. Equipado com tração integral e aerodinâmica ativa (como a grade frontal e o difusor traseiro), ele redefine o que um GT elétrico pode entregar.
+            </p>
+        </div>
+
+        <table class="tabela-tecnica">
+            <tr><td class="label-spec">Ano/Modelo</td><td class="valor-spec">2024</td></tr>
+            <tr><td class="label-spec">Motorização</td><td class="valor-spec">Dual Motor Elétrico (AWD)</td></tr>
+            <tr><td class="label-spec">Potência</td><td class="valor-spec">905 cv (Versão R)</td></tr>
+            <tr><td class="label-spec">Torque</td><td class="valor-spec">100,4 kgfm</td></tr>
+            <tr><td class="label-spec">0 a 100 km/h</td><td class="valor-spec">2,78 segundos</td></tr>
+            <tr><td class="label-spec">Autonomia</td><td class="valor-spec">Aprox. 600 km (WLTP)</td></tr>
+            <tr><td class="label-spec">Recarga Rápida</td><td class="valor-spec">10-80% em 15 min (350kW)</td></tr>
+        </table>
+
+        <button id="btn-favorito" class="btn-contato" onclick="salvarERedirecionar('Lotus Emeya', 'Carrosimg/emeya.png', 'Fichas/emeya.html')">
+            SALVAR NOS FAVORITOS
+        </button>
+
+        <script>
+        function salvarERedirecionar(nome, foto, link) {
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            const botao = document.getElementById('btn-favorito');
+            
+            if (!favoritos.some(c => c.nome === nome)) {
+                favoritos.push({ nome, foto, link });
+                localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            }
+
+            botao.innerHTML = "VER NOS FAVORITOS";
+            botao.style.backgroundColor = "#F5921D";
+
+            setTimeout(() => {
+                window.location.href = "../favorito.html";
+            }, 800);
+        }
+        </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
+        <p class="copyright">&copy; CoreMotors</p>
+      </div>
+    </footer>
+</body>
+</html>

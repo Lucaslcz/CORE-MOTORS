@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CoreMotors - BMW i8 Roadster</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="fichas.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 id="logo">CoreMotors</h1>
+          <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../explorar.html">Todos</a>
+            <a href="../favorito.html">Favoritos</a>
+          </div>
+          <a class="login" href="../login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-carro">
+        <div class="titulo-carro">
+            <h2>BMW i8 Roadster</h2>
+        </div>
+
+        <div class="img-container">
+            <img src="../Carrosimg/i8.png" alt="BMW i8 Roadster">
+        </div>
+
+        <div class="descricao-veiculo">
+            <p style="color: #F5921D; font-weight: bold; margin-bottom: 10px;">
+                O ícone da mobilidade sustentável com teto aberto.
+            </p>
+            <p>
+                O i8 Roadster combina um motor turbo de 3 cilindros com um potente motor elétrico. Sua arquitetura LifeDrive e o design focado em aerodinâmica permitem uma condução ágil com emissões reduzidas, sem abrir mão do estilo inconfundível das portas que abrem para cima.
+            </p>
+        </div>
+
+        <table class="tabela-tecnica">
+            <tr><td class="label-spec">Ano/Modelo</td><td class="valor-spec">2020</td></tr>
+            <tr><td class="label-spec">Motorização</td><td class="valor-spec">Híbrido Plug-in (1.5 Turbo + Elétrico)</td></tr>
+            <tr><td class="label-spec">Potência Combinada</td><td class="valor-spec">374 cv</td></tr>
+            <tr><td class="label-spec">Torque</td><td class="valor-spec">58,1 kgfm</td></tr>
+            <tr><td class="label-spec">0 a 100 km/h</td><td class="valor-spec">4,6 segundos</td></tr>
+            <tr><td class="label-spec">Autonomia Elétrica</td><td class="valor-spec">53 km</td></tr>
+            <tr><td class="label-spec">Peso</td><td class="valor-spec">1.595 kg</td></tr>
+        </table>
+
+        <button id="btn-favorito" class="btn-contato" onclick="salvarERedirecionar('BMW i8 Roadster', 'Carrosimg/i8.png', 'Fichas/i8.html')">
+            SALVAR NOS FAVORITOS
+        </button>
+
+        <script>
+        function salvarERedirecionar(nome, foto, link) {
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            const botao = document.getElementById('btn-favorito');
+            
+            if (!favoritos.some(c => c.nome === nome)) {
+                favoritos.push({ nome, foto, link });
+                localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            }
+
+            botao.innerHTML = "VER NOS FAVORITOS";
+            botao.style.backgroundColor = "#F5921D";
+
+            setTimeout(() => {
+                window.location.href = "../favorito.html";
+            }, 800);
+        }
+        </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
+        <p class="copyright">&copy; CoreMotors</p>
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CoreMotors - Peugeot SR1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="fichas.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 id="logo">CoreMotors</h1>
+          <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../explorar.html">Todos</a>
+            <a href="../favorito.html">Favoritos</a>
+          </div>
+          <a class="login" href="../login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-carro">
+        <div class="titulo-carro">
+            <h2>Peugeot SR1 Concept</h2>
+        </div>
+
+        <div class="img-container">
+            <img src="../Carrosimg/sr1.png" alt="Peugeot SR1">
+        </div>
+
+        <div class="descricao-veiculo">
+            <p style="color: #F5921D; font-weight: bold; margin-bottom: 10px;">
+                O roadster que redefine os códigos de design da Peugeot.
+            </p>
+            <p>
+                O SR1 utiliza a tecnologia HYbrid4, combinando um motor 1.6 THP na frente com um motor elétrico no eixo traseiro, criando uma tração integral quando necessário. Sua estrutura rígida e leve permite uma agilidade impressionante para um GT de luxo.
+            </p>
+        </div>
+
+        <table class="tabela-tecnica">
+            <tr><td class="label-spec">Ano/Modelo</td><td class="valor-spec">2010 (Concept)</td></tr>
+            <tr><td class="label-spec">Motorização</td><td class="valor-spec">Híbrido (1.6 Turbo + Elétrico)</td></tr>
+            <tr><td class="label-spec">Potência Combinada</td><td class="valor-spec">313 cv</td></tr>
+            <tr><td class="label-spec">Consumo Médio</td><td class="valor-spec">20,4 km/l</td></tr>
+            <tr><td class="label-spec">0 a 100 km/h</td><td class="valor-spec">4,7 segundos</td></tr>
+            <tr><td class="label-spec">Tecnologia</td><td class="valor-spec">4 Rodas Esterçantes</td></tr>
+        </table>
+
+        <button id="btn-favorito" class="btn-contato" onclick="salvarERedirecionar('Peugeot SR1', 'Carrosimg/sr1.png', 'Fichas/sr1.html')">
+            SALVAR NOS FAVORITOS
+        </button>
+
+        <script>
+        function salvarERedirecionar(nome, foto, link) {
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            const botao = document.getElementById('btn-favorito');
+            
+            if (!favoritos.some(c => c.nome === nome)) {
+                favoritos.push({ nome, foto, link });
+                localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            }
+
+            botao.innerHTML = "VER NOS FAVORITOS";
+            botao.style.backgroundColor = "#F5921D";
+
+            setTimeout(() => {
+                window.location.href = "../favorito.html";
+            }, 800);
+        }
+        </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
+        <p class="copyright">&copy; CoreMotors</p>
+      </div>
+    </footer>
+</body>
+</html>

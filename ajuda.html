@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CoreMotors - Ajuda e Guia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Style.css">
+    <style>
+        .ajuda-container {
+            padding: 40px 8%;
+            color: white;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .ajuda-container h2 {
+            color: #F5921D;
+            margin-bottom: 20px;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .intro-ajuda {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        .faq-item {
+            background-color: #1A2A38;
+            margin-bottom: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #F5921D;
+        }
+
+        .faq-item h3 {
+            color: #009CDE;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .faq-item p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #e0e0e0;
+        }
+
+        .secao-filtro {
+            margin-top: 50px;
+            padding: 30px;
+            background-color: #0d161d;
+            border: 1px dashed #009CDE;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .secao-filtro h3 {
+            color: #F5921D;
+            margin-bottom: 15px;
+        }
+
+        .btn-filtro {
+            display: inline-block;
+            margin-top: 15px;
+            background-color: #009CDE;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-filtro:hover {
+            background-color: #007bbd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 id="logo">CoreMotors</h1>
+          <div class="links">
+            <a href="index.html">Home</a>
+            <a href="explorar.html">Todos</a>
+            <a href="ajuda.html">Ajuda</a>
+          </div>
+          <a class="login" href="login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="ajuda-container">
+        <h2>Como a CoreMotors te ajuda?</h2>
+        <p class="intro-ajuda">
+            Não vendemos carros. Somos o seu banco de dados automotivo para que você tome a melhor decisão baseada em números e performance.
+        </p>
+
+        <div class="faq-item">
+            <h3>Como interpretar as fichas técnicas?</h3>
+            <p>Nossas fichas são divididas entre motorização, performance e dimensões. Se você busca economia, foque nos dados de consumo. Se busca emoção, observe o torque (força) e o tempo de 0 a 100 km/h.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>O que é o Filtro Inteligente (Em breve)?</h3>
+            <p>É uma ferramenta que fará perguntas sobre sua rotina: quantos quilômetros você roda, se tem família grande ou se prefere asfalto ou terra. Com base nas suas respostas, nosso sistema filtrará os carros ideais da nossa vitrine.</p>
+        </div>
+
+        <div class="faq-item">
+            <h3>Os dados são atualizados?</h3>
+            <p>Sim! Buscamos manter os dados técnicos alinhados com as informações oficiais das montadoras, cobrindo desde clássicos como o Uno 2010 até hipercarros como a Ferrari Enzo.</p>
+        </div>
+
+        <div class="secao-filtro">
+            <h3>Dúvida sobre qual escolher?</h3>
+            <p>Em breve você poderá responder ao nosso questionário interativo para encontrar o match perfeito.</p>
+            <a href="explorar.html" class="btn-filtro">VOLTAR PARA EXPLORAR</a>
+        </div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-slogan">Sua biblioteca técnica automotiva.</p>
+        <p class="copyright">&copy; CoreMotors</p>
+      </div>
+    </footer>
+</body>
+</html>

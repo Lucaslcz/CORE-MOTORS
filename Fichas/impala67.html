@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>CoreMotors - Chevrolet Impala 1967</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Style.css">
+    <link rel="stylesheet" href="fichas.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+          <h1 id="logo">CoreMotors</h1>
+          <div class="links">
+            <a href="../index.html">Home</a>
+            <a href="../explorar.html">Todos</a>
+            <a href="../favorito.html">Favoritos</a>
+          </div>
+          <a class="login" href="../login.html">Entrar</a>
+        </nav>
+    </header>
+
+    <main class="pagina-carro">
+        <div class="titulo-carro">
+            <h2>Chevrolet Impala Sport Sedan 1967</h2>
+        </div>
+
+        <div class="img-container">
+            <img src="../Carrosimg/impala67.png" alt="Chevrolet Impala 1967">
+        </div>
+
+        <div class="descricao-veiculo">
+            <p style="color: #F5921D; font-weight: bold; margin-bottom: 10px;">
+                Mais que um carro, uma lenda da cultura automotiva.
+            </p>
+            <p>
+                O Impala 1967 se destaca pelo seu design "fastback" e as icônicas lanternas triplas. É um "Full-Size" que define o conforto americano da época, combinando uma suspensão macia com a força bruta de um motor V8. Um verdadeiro ícone que atravessa gerações.
+            </p>
+        </div>
+
+        <table class="tabela-tecnica">
+            <tr><td class="label-spec">Ano/Modelo</td><td class="valor-spec">1967</td></tr>
+            <tr><td class="label-spec">Motor</td><td class="valor-spec">5.4L V8 (327 cu in)</td></tr>
+            <tr><td class="label-spec">Potência</td><td class="valor-spec">275 cv</td></tr>
+            <tr><td class="label-spec">Torque</td><td class="valor-spec">49,1 kgfm</td></tr>
+            <tr><td class="label-spec">Transmissão</td><td class="valor-spec">Automática Powerglide 2 marchas</td></tr>
+            <tr><td class="label-spec">Peso</td><td class="valor-spec">1.750 kg</td></tr>
+            <tr><td class="label-spec">Tração</td><td class="valor-spec">Traseira (RWD)</td></tr>
+        </table>
+
+        <button id="btn-favorito" class="btn-contato" onclick="salvarERedirecionar('Chevrolet Impala 1967', 'Carrosimg/impala67.png', 'Fichas/impala67.html')">
+            SALVAR NOS FAVORITOS
+        </button>
+
+        <script>
+        function salvarERedirecionar(nome, foto, link) {
+            let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+            const botao = document.getElementById('btn-favorito');
+            
+            if (!favoritos.some(c => c.nome === nome)) {
+                favoritos.push({ nome, foto, link });
+                localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            }
+
+            botao.innerHTML = "VER NOS FAVORITOS";
+            botao.style.backgroundColor = "#F5921D";
+
+            setTimeout(() => {
+                window.location.href = "../favorito.html";
+            }, 800);
+        }
+        </script>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
+        <p class="copyright">&copy; CoreMotors</p>
+      </div>
+    </footer>
+</body>
+</html>
