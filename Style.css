@@ -10,6 +10,14 @@ body {
   overflow-x: hidden;
   color: white;
 }
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
 
 .navbar {
   background: linear-gradient(to top, #101820, #000000);
