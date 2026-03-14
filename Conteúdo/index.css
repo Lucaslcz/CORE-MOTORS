@@ -109,7 +109,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px 10px;
+  padding: 30px 10px;
   width: 100%;
 }
 
@@ -171,6 +171,15 @@ body {
   width: 100%;
 }
 
+#vitrine{
+  display: block;
+  color: white;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 50px;
+  margin: 3%;
+  text-align: center;
+
+}
 .vitrine {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
