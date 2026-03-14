@@ -1,0 +1,101 @@
+.vitrine {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 10px;
+    align-items: stretch;
+}
+
+.card-carro {
+    background-color: #1A2A38;
+    width: calc(50% - 5px);
+    padding: 15px 10px;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-carro img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.card-carro h3 {
+    color: white;
+    margin-top: 10px;
+    font-size: 14px;
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slogan {
+    font-family: Arial;
+    font-size: 10px;
+    padding: 5% 2%;
+    color: white;
+    text-align: center;
+    line-height: 1.2;
+    flex-grow: 1;
+}
+
+.saibamais {
+    background-color: #F5921D;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 11px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    margin-top: auto;
+}
+
+.search-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#searchInput {
+    width: 90%;
+    max-width: 600px;
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: 2px solid #009CDE;
+    background-color: #1A2A38;
+    color: white;
+    outline: none;
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    .card-carro {
+        width: calc(25% - 20px);
+        max-width: 250px;
+    }
+
+    .vitrine {
+        gap: 20px;
+        padding: 40px;
+    }
+
+    .card-carro img {
+        height: 150px;
+    }
+
+    #searchInput {
+        width: 50%;
+    }
+}

@@ -10,14 +10,6 @@ body {
   overflow-x: hidden;
   color: white;
 }
-html, body {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-body::-webkit-scrollbar {
-  display: none;
-}
 
 .navbar {
   background: linear-gradient(to top, #101820, #000000);
@@ -117,7 +109,7 @@ body::-webkit-scrollbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px 10px;
+  padding: 50px 10px;
   width: 100%;
 }
 
@@ -146,12 +138,30 @@ body::-webkit-scrollbar {
   font-weight: bold;
   border-radius: 12px;
   color: white;
-  font-size: 18px;
+  font-size: 22px;
   transition: 0.3s;
 }
 
-.btn-explorar { background-color: #009CDE; }
-.btn-filtrar { background-color: #F5921D; }
+.btn-explorar { 
+  background-color: #1A2A38;
+  color: #009CDE;
+  border: 2px solid #009CDE;
+}
+.btn-explorar:hover{
+  background-color: #009CDE;
+  color: white;
+}
+
+.btn-filtrar {
+  background-color: #1A2A38;
+  color: #009CDE;
+  border: 2px solid #009CDE;
+}
+.btn-filtrar:hover{
+  background-color: #F5921D;
+  color: white;
+  border: 2px solid #F5921D;
+}
 
 .btn-explorar:hover, .btn-filtrar:hover {
   transform: scale(1.03);
@@ -159,27 +169,6 @@ body::-webkit-scrollbar {
 
 .secondary-buttons {
   width: 100%;
-}
-
-.btn-favoritos-home {
-  background-color: #1A2A38;
-  color: #009CDE;
-  width: 100%;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 18px;
-  border: 2px solid #009CDE;
-  border-radius: 12px;
-  transition: 0.3s;
-}
-
-.btn-favoritos-home:hover {
-  background-color: #009CDE;
-  color: white;
 }
 
 .vitrine {
@@ -251,7 +240,7 @@ body::-webkit-scrollbar {
 }
 
 footer {
-  background: linear-gradient(90deg, #1A2A38, #0D161F);
+  background: linear-gradient(to top, #101820, #000000);
   color: white;
   padding: 40px 20px;
   text-align: center;
@@ -267,7 +256,8 @@ footer {
 
 .footer-slogan {
   font-style: italic;
-  margin-top: 15px;
+  font-size: 20px;
+  margin-top: 10px;
   color: #abb2b9;
 }
 

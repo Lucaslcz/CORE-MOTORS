@@ -1,0 +1,70 @@
+.ajuda-container {
+    padding: 40px 8%;
+    color: white;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.ajuda-container h2 {
+    color: #F5921D;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-align: center;
+}
+
+.intro-ajuda {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.faq-item {
+    background-color: #1A2A38;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #F5921D;
+}
+
+.faq-item h3 {
+    color: #009CDE;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.faq-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e0e0e0;
+}
+
+.secao-filtro {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: #0d161d;
+    border: 1px dashed #009CDE;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.secao-filtro h3 {
+    color: #F5921D;
+    margin-bottom: 15px;
+}
+
+.btn-filtro {
+    display: inline-block;
+    margin-top: 15px;
+    background-color: #009CDE;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn-filtro:hover {
+    background-color: #007bbd;
+}
