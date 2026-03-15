@@ -324,6 +324,7 @@ footer {
 
 .footer-slogan { font-style: italic; font-size: 20px; color: #abb2b9; }
 .copyright { font-size: 12px; margin-top: 20px; opacity: 0.7; }
+.copy{ margin-top: 360px; text-align: center;}
 
 @media (max-width: 768px) {
     .hero-container { height: 250px; }
