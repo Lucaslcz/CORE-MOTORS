@@ -1,4 +1,13 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
+    background-image: url(../IMAGENS_E_VÍDEOS/fundologin.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -8,86 +17,92 @@ body {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
 }
 
 .login-box {
     background-color: #1A2A38;
-    padding: 40px;
-    border-radius: 8px;
+    padding: 50px; 
+    border-radius: 12px;
     width: 100%;
-    max-width: 350px;
+    max-width: 550px;
     text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
 .login-box h2 {
     color: white;
-    margin-bottom: 25px;
-    font-family: Arial, sans-serif;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: left;
 }
 
 .input-group label {
     color: #abb2b9;
-    font-size: 12px;
+    font-size: 20px;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .input-group input {
     width: 100%;
-    padding: 12px;
-    border-radius: 4px;
+    padding: 16px;
+    border-radius: 6px;
     border: 1px solid #2C4A63;
     background-color: #0d1117;
     color: white;
+    font-size: 16px;
     outline: none;
+    box-sizing: border-box;
 }
 
 .input-group input:focus {
     border-color: #009CDE;
 }
 
-.btn-entrar {
+.login-box button {
     width: 100%;
-    padding: 12px;
+    padding: 16px;
     background-color: #F5921D;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: bold;
+    font-size: 18px;
     cursor: pointer;
     transition: 0.3s;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
-.btn-entrar:hover {
+.login-box button:hover {
     background-color: #009CDE;
     transform: scale(1.02);
 }
 
 .login-footer {
-    margin-top: 20px;
-    font-size: 12px;
+    margin-top: 35px;
+    font-size: 15px;
     color: #abb2b9;
 }
 
 .login-footer a {
     color: #009CDE;
     text-decoration: none;
+    font-weight: bold;
 }
+
 @media (min-width: 768px) {
-    .login-container, .form-login {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 40px;
-        border: 1px solid #009CDE;
-        border-radius: 10px;
+    .login-container {
+        padding-top: 150px;
+    }
+    
+    .login-box {
+        border: none;
     }
 }
