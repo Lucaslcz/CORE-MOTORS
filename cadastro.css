@@ -1,5 +1,5 @@
 body {
-    background-image: url(../IMAGENS_E_VÍDEOS/fundocadastro.png);
+    background-image: url('IMAGENS_E_VÍDEOS/fundocadastro.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

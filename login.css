@@ -4,7 +4,7 @@ html, body {
 }
 
 body {
-    background-image: url(../IMAGENS_E_VÍDEOS/fundologin.png);
+    background-image: url('IMAGENS_E_VÍDEOS/fundologin.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
