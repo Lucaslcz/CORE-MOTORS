@@ -13,477 +13,51 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="explorar.css">
+    <link rel="stylesheet" href="index.css">
   </head>
   
   <body>
-    <header>
-      <nav class="navbar">
-        <h1 id="logo">CoreMotors</h1>
-        <div class="links">
-          <a href="index.html">Home</a>
-          <a href="filtro.html">Filtros</a>
-          <a href="ajuda.html">Ajuda</a>
+    <aside id="drawer" class="drawer">
+        <div class="drawer-header">
+            <button id="closeMenu" class="btn-fechar">×</button>
         </div>
-        <a class="login" href="login.html">Entrar</a>
-      </nav>
+        <nav class="drawer-links">
+            <a href="index.html">Início</a>
+            <a href="explorar.html">Explorar</a>
+            <a href="filtro.html">Filtros</a>
+            <a href="favorito.css">Favoritos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="#">Fale Conosco</a>
+            <p class="copy">&copy; CoreMotors</p>
+        </nav>
+    </aside>
+    <div id="overlay-menu" class="overlay-menu"></div>
+
+    <header>
+        <nav class="navbar">
+            <h1 id="logo">CoreMotors</h1>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a class="login" href="login.html">Entrar</a>
+                <button id="openMenu" class="btn-abrir-menu">☰</button>
+            </div>
+        </nav>
     </header>
     
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Pesquise por um carro" onkeyup="searchCar()">
     </div>
     
-    <section class="vitrine">
-      <div class="card-carro">
-        <img src="Carrosimg/gtr-r35.png" alt="GTR-R35">
-        <h3>NISSAN | GT-R R35</h3>
-        
-        <p class="slogan">Nissan GT-R: Performance que desafia a física, design que define o futuro.</p>
-        
-        <a class="saibamais" href="Fichas/gt-r-r35.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/corolla.png" alt="Corolla">
-        <h3>TOYOTA | Corolla</h3>
-        
-        <p class="slogan">O ícone mundial de confiança e durabilidade. União perfeita entre conforto sofisticado e um legado incomparável.</p>
-        
-        <a class="saibamais" href="Fichas/corolla.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/bugatti-chiron.png" alt="Bugatti Chiron">
-        <h3>BUGATTI | Chiron</h3>
-        
-        <p class="slogan">O ápice da engenharia automotiva e do luxo absoluto. Uma obra de arte em movimento que redefine o limite do possível.</p>
-        
-        <a class="saibamais" href="Fichas/chiron.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/zafira.png" alt="Chevrolet Zafira">
-        <h3>CHEVROLET | Zafira</h3>
-        
-        <p class="slogan">O espaço inteligente que acolhe toda a sua família. Conforto, versatilidade e a robustez de um clássico feito para grandes histórias.</p>
-        
-        <a class="saibamais" href="Fichas/zafira2012.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/skyline-gt-r-r34.png" alt="Nissan Skyline R34">
-        <h3>NISSAN | Skyline GT-R R34</h3>
-        
-        <p class="slogan">O eterno ícone das ruas e das telas. A lenda japonesa que une o domínio tecnológico ao espírito indomável do asfalto.</p>
-        
-        <a class="saibamais" href="Fichas/skyline.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/ford-fusion.png" alt="Ford Fusion">
-        <h3>FORD | Fusion</h3>
-        
-        <p class="slogan">A presença marcante de um sedan executivo. Onde o design sofisticado encontra a potência e a tecnologia de um verdadeiro líder.</p>
-        
-        <a class="saibamais" href="Fichas/fusion.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/hb20.png" alt="Hyundai HB20">
-        <h3>HYUNDAI | HB20</h3>
-        
-        <p class="slogan">
-          A combinação perfeita de design arrojado, tecnologia de ponta e a agilidade que a tua rotina pede.
-        </p>
-        
-        <a class="saibamais" href="Fichas/hb20.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/uno2010.png" alt="Fiat Uno 2010">
-        <h3>FIAT | Uno</h3>
-        
-        <p class="slogan">
-          A lenda da economia e robustez. O parceiro ideal para quem busca custo-benefício e resistência em qualquer terreno.
-        </p>
-        
-        <a class="saibamais" href="Fichas/uno2010.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/subaru.png" alt="Subaru WRX STI">
-        <h3>SUBARU | WRX STI</h3>
-        
-        <p class="slogan">
-          Domine qualquer estrada com o DNA das pistas de rally e a precisão inigualável da tração integral Symmetrical AWD.
-        </p>
-        
-        <a class="saibamais" href="Fichas/subaru.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/cronos.png" alt="Fiat Cronos">
-        <h3>FIAT | Cronos</h3>
-        
-        <p class="slogan">
-          Sofisticação italiana com o espaço que a sua família merece. O sedan que une economia e elegância em cada detalhe.
-        </p>
-        
-        <a class="saibamais" href="Fichas/cronos.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/enzo.png" alt="Ferrari Enzo">
-        <h3>FERRARI | Enzo</h3>
-        
-        <p class="slogan">
-          A personificação da alma da Ferrari. Um supercarro lendário que une tecnologia de Fórmula 1 e exclusividade absoluta.
-        </p>
-        
-        <a class="saibamais" href="Fichas/enzo.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/huracan.png" alt="Lamborghini Huracán">
-        <h3>LAMBORGHINI | Huracán</h3>
-        
-        <p class="slogan">
-          A evolução do instinto. Desempenho aerodinâmico e o rugido inconfundível do motor V10 para quem não aceita menos que o topo.
-        </p>
-        
-        <a class="saibamais" href="Fichas/huracan.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-        <img src="Carrosimg/mitsubishi.png" alt="Mitsubishi Lancer Evo X">
-        <h3>MITSUBISHI | Lancer Evo X</h3>
-        
-        <p class="slogan">
-          A lenda do asfalto e da terra. Sinta o controle total com a tecnologia S-AWC e a potência do motor MIVEC Turbo.
-        </p>
-        
-        <a class="saibamais" href="Fichas/mitsubishi.html">Saiba Mais</a>
-      </div>
-      
-      <div class="card-carro">
-  <img src="Carrosimg/ram.png" alt="Dodge Ram 2500">
-  <h3>DODGE | Ram 2500</h3>
-  
-  <p class="slogan">
-    A força bruta do motor Cummins Diesel aliada ao luxo premium. Domine qualquer terreno com torque monumental.
-  </p>
-  
-  <a class="saibamais" href="Fichas/ram.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/370z-nismo.png" alt="Nissan 370Z Nismo">
-  <h3>NISSAN | 370Z Nismo</h3>
-  
-  <p class="slogan">
-    A pura essência do desempenho japonês. Engenharia Nismo focada em pista para uma experiência de condução visceral e emocionante.
-  </p>
-  
-  <a class="saibamais" href="Fichas/370z-nismo.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/z4-lci.png" alt="BMW Z4 LCI E89">
-  <h3>BMW | Z4 LCI E89</h3>
-  
-  <p class="slogan">
-    A liberdade de um roadster com o refinamento alemão. Onde o prazer de dirigir a céu aberto encontra o design atemporal.
-  </p>
-  
-  <a class="saibamais" href="Fichas/z4-lci.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/palio2012-2017.png" alt="Fiat Palio">
-  <h3>FIAT | Palio</h3>
-  
-  <p class="slogan">
-    A evolução de um clássico brasileiro. Conforto, economia e o design moderno que conquistou as ruas de todo o país.
-  </p>
-  
-  <a class="saibamais" href="Fichas/palio2012-2017.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/palio2010.png" alt="Fiat Palio 2010">
-  <h3>FIAT | Palio</h3>
-  
-  <p class="slogan">
-    O equilíbrio perfeito entre economia e versatilidade. Um ícone de confiança para quem busca praticidade no dia a dia.
-  </p>
-  
-  <a class="saibamais" href="Fichas/palio2010.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/leaf-nismo-rc.png" alt="Nissan LEAF NISMO RC">
-  <h3>NISSAN | Leaf Nismo RC</h3>
-  
-  <p class="slogan">
-    A evolução da performance elétrica. Tecnologia de pista e torque instantâneo em um protótipo de corrida 100% emissão zero.
-  </p>
-  
-  <a class="saibamais" href="Fichas/leaf-nismo-rc.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/camaro-ss.png" alt="Chevrolet Camaro SS">
-  <h3>CHEVROLET | Camaro SS</h3>
-  
-  <p class="slogan">
-    O lendário muscle car americano. Sinta a força bruta do motor V8 e o design imponente que domina as ruas por onde passa.
-  </p>
-  
-  <a class="saibamais" href="Fichas/camaro-ss.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/civic.png" alt="Honda Civic Type R">
-  <h3>HONDA | Civic Type R</h3>
-  
-  <p class="slogan">
-    O hot hatch definitivo. Performance de pista com a precisão japonesa para dominar cada curva com adrenalina pura.
-  </p>
-  
-  <a class="saibamais" href="Fichas/civic.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/x-bow-gtx.png" alt="KTM X-Bow GTX">
-  <h3>KTM | X-Bow GTX</h3>
-  
-  <p class="slogan">
-    Puro sangue das pistas. Um chassi de carbono ultraleve unido à força bruta do motor Audi 5-cilindros para uma experiência visceral.
-  </p>
-  
-  <a class="saibamais" href="Fichas/x-bow-gtx.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/xl-sport.png" alt="VW XL Sport">
-  <h3>VW | XL Sport Concept</h3>
-  
-  <p class="slogan">
-    Engenharia alemã com alma italiana. Movido pelo motor V2 de 11.000 RPM da Ducati Superleggera.
-  </p>
-  
-  <a class="saibamais" href="Fichas/xl-sport.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/e-tense.png" alt="DS E-TENSE">
-  <h3>DS | E-TENSE Concept</h3>
-  
-  <p class="slogan">
-    A vanguarda do luxo elétrico francês. Performance silenciosa com um design inspirado na alta costura.
-  </p>
-  
-  <a class="saibamais" href="Fichas/e-tense.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/challenger-392.png" alt="Dodge Challenger 392">
-  <h3>Dodge | Challenger 392 HEMI</h3>
-  
-  <p class="slogan">
-    Puro poder americano. O ronco inconfundível do motor V8 HEMI em um design que define o que é um verdadeiro Muscle Car.
-  </p>
-  
-  <a class="saibamais" href="Fichas/challenger-392.html">Saiba Mais</a>
-</div>
-<div class="card-carro">
-  <img src="Carrosimg/dezir.png" alt="Renault DeZir">
-  <h3>Renault | DeZir Concept</h3>
-  
-  <p class="slogan">
-    A personificação da paixão elétrica. Um estudo de design que combina formas orgânicas com performance sustentável.
-  </p>
-  
-  <a class="saibamais" href="Fichas/dezir.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/davinci.png" alt="Italdesign DaVinci">
-  <h3>Italdesign | DaVinci Concept</h3>
-  
-  <p class="slogan">
-    A harmonia perfeita entre arte e engenharia. Um GT elétrico de luxo que redefine a elegância italiana.
-  </p>
-  
-  <a class="saibamais" href="Fichas/davinci.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/i8.png" alt="BMW i8 Roadster">
-  <h3>BMW | i8 Roadster</h3>
-  
-  <p class="slogan">
-    A liberdade do amanhã. Um híbrido plug-in que combina a eficiência elétrica com a esportividade de um conversível premium.
-  </p>
-  
-  <a class="saibamais" href="Fichas/i8.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/sr1.png" alt="Peugeot SR1">
-  <h3>Peugeot | SR1 Concept</h3>
-  
-  <p class="slogan">
-    A reinvenção do Grand Tourismo. Um híbrido escultural que une luxo, precisão e tecnologia dinâmica.
-  </p>
-  
-  <a class="saibamais" href="Fichas/sr1.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/opala-coupe.png" alt="Chevrolet Opala Coupé">
-  <h3>CHEVROLET | Opala Coupé</h3>
-  
-  <p class="slogan">
-    O soberano das estradas brasileiras. Estilo clássico, tração traseira e o ronco inconfundível do motor 6 cilindros.
-  </p>
-  
-  <a class="saibamais" href="Fichas/opala-coupe.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/911-carreira-rs-3.8.png" alt="Porsche 911 Carrera RS 3.8">
-  <h3>PORSCHE | 911 Carrera RS 3.8</h3>
-  
-  <p class="slogan">
-    A essência das pistas nas ruas. Aliviado no peso e amplificado na alma, o RS 3.8 é o ápice da geração 964.
-  </p>
-  
-  <a class="saibamais" href="Fichas/911-carreira-rs-3.8.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/206-presence.png" alt="Peugeot 206 Presence">
-  <h3>PEUGEOT | 206 Presence</h3>
-  
-  <p class="slogan">
-    O compacto que revolucionou o design. Estilo europeu, agilidade urbana e a personalidade marcante do leão.
-  </p>
-  
-  <a class="saibamais" href="Fichas/206-presence.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/718-cayman.png" alt="Porsche 718 Cayman">
-  <h3>PORSCHE | 718 Cayman</h3>
-  
-  <p class="slogan">
-    Precisão em cada curva. O esportivo de motor central que entrega a dinâmica mais pura da engenharia de Stuttgart.
-  </p>
-  
-  <a class="saibamais" href="Fichas/718-cayman.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/impala67.png" alt="Chevrolet Impala 1967">
-  <h3>CHEVROLET | Impala 1967</h3>
-  
-  <p class="slogan">
-    O ápice dos Full-Size americanos. Estilo inconfundível, motor V8 massivo e uma presença que domina qualquer estrada.
-  </p>
-  
-  <a class="saibamais" href="Fichas/impala67.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/project-black-s.png" alt="Infiniti Project Black S">
-  <h3>INFINITI | Project Black S</h3>
-  
-  <p class="slogan">
-    A potência da Fórmula 1 nas ruas. Um cupê híbrido de alto desempenho com tecnologia de recuperação de energia.
-  </p>
-  
-  <a class="saibamais" href="Fichas/project-black-s.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/elise-sprint.png" alt="Lotus Elise Sprint 220">
-  <h3>LOTUS | Elise Sprint 220</h3>
-  
-  <p class="slogan">
-    Leveza absoluta. Criado para oferecer a conexão mais pura entre o motorista e a estrada.
-  </p>
-  
-  <a class="saibamais" href="Fichas/elise-sprint.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/emeya.png" alt="Lotus Emeya">
-  <h3>LOTUS | Emeya</h3>
-  
-  <p class="slogan">
-    O Hiper-GT elétrico. Onde o luxo encontra a performance de pista em uma silhueta aerodinâmica de quatro portas.
-  </p>
-  
-  <a class="saibamais" href="Fichas/emeya.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/gr-supra.png" alt="Toyota GR Supra">
-  <h3>TOYOTA | GR Supra</h3>
-  
-  <p class="slogan">
-    A lenda retornou. Um cupê de performance pura, tração traseira e o equilíbrio perfeito para dominar as pistas.
-  </p>
-  
-  <a class="saibamais" href="Fichas/gr-supra.html">Saiba Mais</a>
-</div>
-
-<div class="card-carro">
-  <img src="Carrosimg/countach.png" alt="Lamborghini Countach 25 Anos">
-  <h3>LAMBORGHINI | Countach 25th Anniversary</h3>
-  
-  <p class="slogan">
-    O pôster de uma geração. O supercarro definitivo que desafiou as leis do design com seu motor V12 e portas tesoura.
-  </p>
-  
-  <a class="saibamais" href="Fichas/countach.html">Saiba Mais</a>
-</div>
-
-
-    </section>
+    
     
     <footer>
       <div class="footer-content">
-        <p>coremotors@worldcars.com.br</p>
-        <p>(31) 92002-4004</p>
         <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
         <p class="copyright">&copy; CoreMotors</p>
       </div>
     </footer>
     
-    <script>
-      function searchCar() {
-          let input = document.getElementById('searchInput').value.toLowerCase();
-          let cards = document.getElementsByClassName('card-carro');
-      
-          for (let i = 0; i < cards.length; i++) {
-              let h3Elements = cards[i].getElementsByTagName('h3');
-              let title = "";
-              
-              for (let h3 of h3Elements) {
-                  if (h3.innerText.trim() !== "") {
-                      title = h3.innerText.toLowerCase();
-                      break;
-                  }
-              }
-              
-              if (title.includes(input)) {
-                  cards[i].style.display = "";
-              } else {
-                  cards[i].style.display = "none";
-              }
-          }
-      }
-    </script>
+    <script src="index.js"></script>
+    <script src="explorar.js"></script>
   </body>
 </html>
