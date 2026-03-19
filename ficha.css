@@ -51,12 +51,12 @@
     color: white;
 }
 
-.label-spec {
+.in-informacoes {
     font-weight: bold;
     color: #009CDE;
 }
 
-.valor-spec {
+.out-informacoes {
     text-align: right;
 }
 
