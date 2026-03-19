@@ -9,15 +9,30 @@
 </head>
 
 <body>
+    <aside id="drawer" class="drawer">
+        <div class="drawer-header">
+            <button id="closeMenu" class="btn-fechar">×</button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html">Início</a>
+            <a href="explorar.html">Explorar</a>
+            <a href="filtro.html">Filtros</a>
+            <a href="favorito.html">Favoritos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="#">Fale Conosco</a>
+            <p class="copy">&copy; CoreMotors</p>
+        </nav>
+    </aside>
+    <div id="overlay-menu" class="overlay-menu"></div>
+
     <header>
         <nav class="navbar">
-          <h1 id="logo">CoreMotors</h1>
-          <div class="links">
-            <a href="index.html">Home</a>
-            <a href="explorar.html">Todos</a>
-            <a href="ajuda.html">Ajuda</a>
-          </div>
-          <a class="login" href="login.html">Entrar</a>
+            <h1 id="logo">CoreMotors</h1>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a class="login" href="login.html">Entrar</a>
+                <button id="openMenu" class="btn-abrir-menu">☰</button>
+            </div>
         </nav>
     </header>
 
@@ -55,5 +70,7 @@
         <p class="copyright">&copy; CoreMotors</p>
       </div>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

@@ -9,14 +9,30 @@
 </head>
 
 <body>
+    <aside id="drawer" class="drawer">
+        <div class="drawer-header">
+            <button id="closeMenu" class="btn-fechar">×</button>
+        </div>
+        <nav class="drawer-links">
+            <a href="index.html">Início</a>
+            <a href="explorar.html">Explorar</a>
+            <a href="filtro.html">Filtros</a>
+            <a href="favorito.html">Favoritos</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="ajuda.html">Ajuda</a>
+            <a href="#">Fale Conosco</a>
+            <p class="copy">&copy; CoreMotors</p>
+        </nav>
+    </aside>
+    <div id="overlay-menu" class="overlay-menu"></div>
+
     <header>
         <nav class="navbar">
-          <h1 id="logo">CoreMotors</h1>
-          <div class="links">
-            <a href="index.html">Home</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="ajuda.html">Ajuda</a>
-          </div>
+            <h1 id="logo">CoreMotors</h1>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <a class="login" href="login.html">Entrar</a>
+                <button id="openMenu" class="btn-abrir-menu">☰</button>
+            </div>
         </nav>
     </header>
 
@@ -40,34 +56,7 @@
       </div>
     </footer>
 
-    <script>
-        function carregarFavoritos() {
-            const lista = document.getElementById('lista-favoritos');
-            const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-
-            if (favoritos.length === 0) {
-                lista.innerHTML = '<p class="vazio-msg">Você ainda não salvou nenhuma ficha técnica.</p>';
-                return;
-            }
-
-            lista.innerHTML = favoritos.map((carro, index) => `
-                <div class="card-carro">
-                    <img src="${carro.foto}" alt="${carro.nome}">
-                    <h3>${carro.nome}</h3>
-                    <a class="btn-ver-ficha" href="${carro.link}">VER FICHA TÉCNICA</a>
-                    <button onclick="removerFavorito(${index})" class="btn-remover">Remover da lista</button>
-                </div>
-            `).join('');
-        }
-
-        function removerFavorito(index) {
-            let favoritos = JSON.parse(localStorage.getItem('favoritos'));
-            favoritos.splice(index, 1);
-            localStorage.setItem('favoritos', JSON.stringify(favoritos));
-            carregarFavoritos();
-        }
-
-        carregarFavoritos();
-    </script>
+    <script src="index.js"></script>
+    <script src="favorito.js"></script>
 </body>
 </html>
