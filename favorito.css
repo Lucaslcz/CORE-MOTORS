@@ -52,6 +52,12 @@ body {
     transition: 0.3s;
 }
 
+.btn:hover{
+    background-color: #F5921D;
+    color: white;
+    border: 2px solid #F5921D;
+}
+
 .vazio-msg { 
     text-align: center; 
     color: #ccc; 
