@@ -17,25 +17,11 @@ async function loadCars() {
 function renderBrandFilters() {
     const grid = document.getElementById('marcasGrid');
     if (!grid) return;
-
     const uniqueBrands = [...new Set(allCars.map(car => car.Marca))].sort();
-
-    let gridHTML = `
-        <div class="marca-item" onclick="setBrandFilter('')" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center;">
-            <div style="font-size: 35px; margin-bottom: 10px;">🚗</div>
-            <span>Todos</span>
-        </div>
-    `;
-
+    let gridHTML = `<div class="marca-item" onclick="setBrandFilter('')"><span>Todos</span></div>`;
     uniqueBrands.forEach(brand => {
-        gridHTML += `
-            <div class="marca-item" onclick="setBrandFilter('${brand}')" style="display: flex; flex-direction: column; align-items: center; text-align: center; justify-content: center;">
-                <div style="font-size: 35px; margin-bottom: 10px;">🚘</div>
-                <span style="width: 100%; word-wrap: break-word;">${brand}</span>
-            </div>
-        `;
+        gridHTML += `<div class="marca-item" onclick="setBrandFilter('${brand}')"><span>${brand}</span></div>`;
     });
-
     grid.innerHTML = gridHTML;
 }
 
@@ -57,7 +43,7 @@ function renderTable(data) {
                 <td style="color: #009CDE; font-weight: bold;">${car.Id}</td>
                 <td>${car.Marca}</td>
                 <td>${car.Nome}</td>
-                <td><a href="ficha.html?id=${car.Id}" class="btn-saiba-mais">Saiba mais</a></td>
+                <td><a href="ficha.html?nome=${encodeURIComponent(car.Nome)}" class="btn-saiba-mais">Saiba mais</a></td>
             </tr>`;
         tbody.innerHTML += row;
     });
@@ -77,15 +63,7 @@ function filterCars() {
 
 function setBrandFilter(brand) {
     selectedBrand = brand;
-    const modalFilter = document.getElementById("filterModal");
-    if (modalFilter) modalFilter.style.display = "none";
     filterCars();
 }
 
-const modalFilter = document.getElementById("filterModal");
-const btnFilter = document.getElementById("openFilter");
-const spanCloseFilter = document.querySelector(".close-modal");
-if (btnFilter) btnFilter.onclick = () => modalFilter.style.display = "block";
-if (spanCloseFilter) spanCloseFilter.onclick = () => modalFilter.style.display = "none";
-window.addEventListener('click', (e) => { if (e.target == modalFilter) modalFilter.style.display = "none"; });
 window.onload = loadCars;

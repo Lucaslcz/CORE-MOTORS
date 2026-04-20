@@ -6,12 +6,6 @@
     gap: 20px;
 }
 
-.titulo-carro {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-}
-
 .titulo-carro h2 {
     font-size: 28px;
     color: white;
@@ -26,14 +20,6 @@
     width: 100%;
     height: auto;
     border-radius: 10px;
-}
-
-.descricao-veiculo {
-    width: 100%;
-    color: #ccc;
-    font-size: 16px;
-    line-height: 1.5;
-    text-align: justify;
 }
 
 .tabela-tecnica {
@@ -66,15 +52,9 @@
     width: 100%;
     max-width: 400px;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
     border: 3px solid #009CDE;
     border-radius: 12px;
-    text-transform: uppercase;
+    font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -89,24 +69,9 @@
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 50px;
         padding: 60px 10%;
-        align-items: flex-start;
     }
-
-    .titulo-carro {
-        text-align: left;
-    }
-
-    .titulo-carro h2 {
-        font-size: 40px;
-    }
-
-    .img-container {
-        flex: 1;
-    }
-
-    .descricao-veiculo {
+    .img-container, .descricao-veiculo {
         flex: 1;
         min-width: 300px;
     }

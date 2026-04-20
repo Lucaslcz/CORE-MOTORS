@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>CoreMotors - Nissan GT-R R35</title>
+    <title>CoreMotors - Ficha Técnica</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
@@ -9,23 +9,6 @@
     <link rel="stylesheet" href="ficha.css">
 </head>
 <body>
-   <aside id="drawer" class="drawer">
-        <div class="drawer-header">
-            <button id="closeMenu" class="btn-fechar">×</button>
-        </div>
-        <nav class="drawer-links">
-            <a href="index.html">Início</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="filtro.html">Filtros</a>
-            <a href="favorito.html">Favoritos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="ajuda.html">Ajuda</a>
-            <a href="#">Fale Conosco</a>
-            <p class="copy">&copy; CoreMotors</p>
-        </nav>
-    </aside>
-    <div id="overlay-menu" class="overlay-menu"></div>
-
     <header>
         <nav class="navbar">
             <h1 id="logo">CoreMotors</h1>
@@ -38,45 +21,21 @@
 
     <main class="pagina-carro">
         <div class="titulo-carro">
-            <h2>Nissan GT-R R35</h2>
-        </div>
-
-        <div class="img-container">
-            <img src="../Carrosimg/gtr-r35.png" alt="Nissan GT-R R35">
+            <h2 id="carro-nome">Buscando informações...</h2>
         </div>
 
         <div class="descricao-veiculo">
             <p style="color: #F5921D; font-weight: bold; margin-bottom: 10px;">
-                Este carro é ideal para você que busca o ápice da engenharia japonesa e uma experiência de condução visceral.
-            </p>
-            <p>
-                O lendário "Godzilla" é conhecido por sua tração integral ATTESA E-TS e seu motor montado à mão em uma sala limpa por mestres artesãos (Takumis).
+                Especificações Técnicas Oficiais
             </p>
         </div>
 
-        <table class="tabela-tecnica">
-            <tr><td class="in-informacoes">Ano/Modelo</td><td class="out-informacoes">2023</td></tr>
-            <tr><td class="in-iin-informacoes">Motor</td><td class="out-informacoes">3.8L V6 Biturbo VR38DETT</td></tr>
-            <tr><td class="in-informacoes">Potência</td><td class="out-informacoes">565 cv @ 6.800 rpm</td></tr>
-            <tr><td class="in-informacoes">Torque</td><td class="out-informacoes">64,5 kgfm</td></tr>
-            <tr><td class="in-informacoes">0 a 100 km/h</td><td class="out-informacoes">2,8 segundos</td></tr>
-            <tr><td class="in-informacoes">Câmbio</td><td class="out-informacoes">GR6 Dupla Embreagem</td></tr>
-            <tr><td class="in-informacoes">Tração</td><td class="out-informacoes">AWD (Integral Inteligente)</td></tr>
-            <tr><td class="label-spec">Peso</td><td class="valor-spec">1.750 kg</td></tr>
-        </table>
+        <table class="tabela-tecnica" id="tabela-dados"></table>
 
-        <button id="btn-favorito" class="btn-contato" onclick="salvarERedirecionar('Nissan GT-R R35', 'Carrosimg/gtr-r35.png', 'Fichas/gt-r-r35.html')">
+        <button id="btn-favorito" class="btn-contato">
             SALVAR NOS FAVORITOS
         </button>
-
     </main>
-
-    <footer>
-      <div class="footer-content">
-        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
-        <p class="copyright">&copy; CoreMotors</p>
-      </div>
-    </footer>
 
     <script src="ficha.js"></script>
     <script src="index.js"></script>
