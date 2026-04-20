@@ -1,22 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <title>CoreMotors</title>
-    
+<head>
+    <title>CoreMotors - Explorar</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <meta name="description" content="Site de teste de aprendizado.">
-    <meta name="author" content="Lucas Da Cruz">
-    <meta name="robots" content="index, follow">
-    
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="explorar.css">
-    <link rel="stylesheet" href="index.css">
-  </head>
-  
-  <body>
+    <link rel="stylesheet" href="index.css"> 
+</head>
+<body>
+
     <aside id="drawer" class="drawer">
         <div class="drawer-header">
             <button id="closeMenu" class="btn-fechar">×</button>
@@ -43,21 +37,52 @@
             </div>
         </nav>
     </header>
-    
+
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Pesquise por um carro" onkeyup="searchCar()">
+        <div class="search-wrapper">
+            <input type="text" id="searchInput" placeholder="Pesquise por ID, Nome ou Marca..." onkeyup="filterCars()">
+            <button id="openFilter" class="btn-filtro">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"></path></svg>
+            </button>
+        </div>
     </div>
-    
-    
-    
+
+    <div id="filterModal" class="modal-marcas">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3>Filtrar por Marca</h3>
+            <div id="marcasGrid" class="marcas-grid"></div>
+        </div>
+    </div>
+
+    <main class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+    </main>
+
+    <a href="#" class="btn-topo">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+            <path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/>
+        </svg>
+    </a>
+
     <footer>
-      <div class="footer-content">
-        <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
-        <p class="copyright">&copy; CoreMotors</p>
-      </div>
+        <div class="footer-content">
+            <p class="footer-slogan">Um mundo inteiro sobre rodas.</p>
+            <p class="copyright">&copy; CoreMotors</p>
+        </div>
     </footer>
-    
+
     <script src="index.js"></script>
-    <script src="explorar.js"></script>
-  </body>
+    <script src="explorar.js"></script> 
+</body>
 </html>

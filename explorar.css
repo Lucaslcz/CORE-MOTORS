@@ -1,13 +1,54 @@
+body {
+    background-color: #0d1b2a;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: #1A2A38;
+}
+
+#logo { 
+    font-family: 'Architects Daughter', cursive; 
+    margin: 0; 
+}
+
+.login { 
+    color: #009CDE; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.btn-abrir-menu { 
+    background: none; 
+    border: none; 
+    color: white; 
+    font-size: 24px; 
+    cursor: pointer; 
+}
+
 .search-container {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 30px 0;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 90%;
+    max-width: 600px;
 }
 
 #searchInput {
-    width: 90%;
-    max-width: 600px;
+    flex: 1;
     padding: 12px 20px;
     border-radius: 25px;
     border: 2px solid #009CDE;
@@ -17,22 +58,142 @@
     font-size: 16px;
 }
 
-@media (min-width: 768px) {
-    .card-carro {
-        width: calc(25% - 20px);
-        max-width: 250px;
-    }
+.btn-filtro {
+    background-color: #009CDE;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
 
-    .vitrine {
-        gap: 20px;
-        padding: 40px;
-    }
+.btn-filtro:hover { 
+    background-color: #007bbd; 
+}
 
-    .card-carro img {
-        height: 150px;
-    }
+.table-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto 50px auto;
+    overflow-x: auto;
+    background-color: #1A2A38;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
 
-    #searchInput {
-        width: 50%;
-    }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+th {
+    background-color: #009CDE;
+    padding: 18px;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+td {
+    padding: 15px;
+    border-bottom: 1px solid #253341;
+}
+
+tr:hover { 
+    background-color: #253341; 
+}
+
+.btn-saiba-mais {
+    background-color: #FF8C00;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-saiba-mais:hover {
+    background-color: #e67e00;
+    transform: scale(1.05);
+}
+
+.modal-marcas {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #1a242f;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #009CDE;
+    border-radius: 15px;
+    width: 90%; 
+    max-width: 1000px; 
+    max-height: 80vh; 
+    overflow-y: auto; 
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 156, 222, 0.3);
+}
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+.modal-content::-webkit-scrollbar-track {
+    background: #0d161f;
+    border-radius: 10px;
+}
+.modal-content::-webkit-scrollbar-thumb {
+    background: #009CDE;
+    border-radius: 10px;
+}
+
+.close-modal {
+    position: absolute;
+    right: 20px; top: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #009CDE;
+}
+
+.marcas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+    gap: 15px;
+    padding: 10px;
+}
+
+.marca-item {
+    background: #253341;
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.marca-item:hover { 
+    background: #009CDE; 
+}
+
+.marca-item img {
+    width: 70px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px;
 }
