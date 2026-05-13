@@ -3,7 +3,7 @@ let selectedBrand = "";
 
 async function loadCars() {
     try {
-        const response = await fetch('explorar.json');
+        const response = await fetch('/static/explorar.json');
         if (!response.ok) throw new Error("Erro ao carregar explorar.json");
         allCars = await response.json();
         renderBrandFilters();
@@ -43,7 +43,7 @@ function renderTable(data) {
                 <td style="color: #009CDE; font-weight: bold;">${car.Id}</td>
                 <td>${car.Marca}</td>
                 <td>${car.Nome}</td>
-                <td><a href="ficha.html?nome=${encodeURIComponent(car.Nome)}" class="btn-saiba-mais">Saiba mais</a></td>
+                <td><a href="/ficha?nome=${encodeURIComponent(car.Nome)}" class="btn-saiba-mais">Saiba mais</a></td>
             </tr>`;
         tbody.innerHTML += row;
     });

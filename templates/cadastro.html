@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>CoreMotors - Login</title>
+    <title>CoreMotors - Cadastro</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +12,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="cadastro.css">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='cadastro.css') }}">
 </head>
 <body>
     <aside id="drawer" class="drawer">
@@ -21,12 +22,12 @@
             <button id="closeMenu" class="btn-fechar">×</button>
         </div>
         <nav class="drawer-links">
-            <a href="index.html">Início</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="filtro.html">Filtros</a>
-            <a href="favorito.html">Favoritos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="ajuda.html">Ajuda</a>
+            <a href="{{ url_for('home') }}">Início</a>
+            <a href="/explorar">Explorar</a>
+            <a href="/filtro">Filtros</a>
+            <a href="/favorito">Favoritos</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/ajuda">Ajuda</a>
             <a href="#">Fale Conosco</a>
             <p class="copy">&copy; CoreMotors</p>
         </nav>
@@ -40,13 +41,12 @@
                 <button id="openMenu" class="btn-abrir-menu">☰</button>
             </div>
         </nav>
-
     </header>
 
 <main class="cadastro-container">
     <div class="cadastro-box">
         <h2>Criar Conta</h2>
-        <form action="cadastro.php" method="POST"> 
+        <form action="/cadastrar" method="POST"> 
             <div class="input-group">
                 <label>Nome Completo</label>
                 <input type="text" name="nome" placeholder="Seu nome" required> 
@@ -66,12 +66,11 @@
             <button type="submit" class="btn-cadastrar">FINALIZAR CADASTRO</button>
         </form>
         <div class="cadastro-footer">
-            <p>Já possui uma conta? <a href="login.html">Faça login</a></p>
+            <p>Já possui uma conta? <a href="{{ url_for('pagina_login') }}">Faça login</a></p>
         </div>
     </div>
 </main>
 
-
-    <script src="index.js"></script>
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 </html>

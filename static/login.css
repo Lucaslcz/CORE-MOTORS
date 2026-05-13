@@ -1,5 +1,10 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
-    background-image: url('IMAGENS_E_VÍDEOS/fundocadastro.png');
+    background-image: url('../IMAGENS_E_VÍDEOS/fundologin.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -9,17 +14,17 @@ body {
     background-color: #000000;
 }
 
-.cadastro-container {
+.login-container {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     padding: 20px;
 }
 
-.cadastro-box {
+.login-box {
     background-color: #1A2A38;
-    padding: 50px;
+    padding: 50px; 
     border-radius: 12px;
     width: 100%;
     max-width: 550px;
@@ -27,7 +32,7 @@ body {
     box-shadow: 0 15px 35px rgba(0,0,0,0.4);
 }
 
-.cadastro-box h2 {
+.login-box h2 {
     color: white;
     margin-bottom: 40px;
     font-size: 32px;
@@ -43,7 +48,7 @@ body {
     color: #abb2b9;
     font-size: 20px;
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .input-group input {
@@ -55,13 +60,17 @@ body {
     color: white;
     font-size: 16px;
     outline: none;
-    box-sizing: border-box;;
+    box-sizing: border-box;
 }
 
-.btn-cadastrar {
+.input-group input:focus {
+    border-color: #009CDE;
+}
+
+.login-box button {
     width: 100%;
     padding: 16px;
-    background-color: #009CDE;
+    background-color: #F5921D;
     color: white;
     border: none;
     border-radius: 6px;
@@ -72,26 +81,29 @@ body {
     margin-top: 15px;
 }
 
-.btn-cadastrar:hover {
-    background-color: #F5921D;
+.login-box button:hover {
+    background-color: #009CDE;
+    transform: scale(1.02);
 }
 
-.cadastro-footer {
+.login-footer {
     margin-top: 35px;
     font-size: 15px;
     color: #abb2b9;
 }
 
-.cadastro-footer a {
-    color: #F5921D;
+.login-footer a {
+    color: #009CDE;
     text-decoration: none;
+    font-weight: bold;
 }
+
 @media (min-width: 768px) {
-    .login-container, .form-login {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 40px;
-        border: 1px solid #009CDE;
-        border-radius: 10px;
+    .login-container {
+        padding-top: 150px;
+    }
+    
+    .login-box {
+        border: none;
     }
 }
