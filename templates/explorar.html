@@ -16,13 +16,13 @@
             <button id="closeMenu" class="btn-fechar">×</button>
         </div>
         <nav class="drawer-links">
-            <a href="index.html">Início</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="filtro.html">Filtros</a>
-            <a href="favorito.html">Favoritos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="ajuda.html">Ajuda</a>
-            <a href="#">Fale Conosco</a>
+            <a href="{{ url_for('home') }}">Início</a>
+            <a href="{{ url_for('explorar') }}">Explorar</a>
+            <a href="{{ url_for('filtro') }}">Filtros</a>
+            <a href="{{ url_for('favorito') }}">Favoritos</a>
+            <a href="{{ url_for('sobre') }}">Sobre</a>
+            <a href="{{ url_for('ajuda') }}">Ajuda</a>
+            <a href="{{ url_for('suporte') }}">Fale Conosco</a>
             <p class="copy">&copy; CoreMotors</p>
         </nav>
     </aside>

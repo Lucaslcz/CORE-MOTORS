@@ -21,13 +21,13 @@
             <button id="closeMenu" class="btn-fechar">×</button>
         </div>
         <nav class="drawer-links">
-            <a href="index.html">Início</a>
-            <a href="explorar.html">Explorar</a>
-            <a href="filtro.html">Filtros</a>
-            <a href="favorito.html">Favoritos</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="ajuda.html">Ajuda</a>
-            <a href="#">Fale Conosco</a>
+            <a href="{{ url_for('home') }}">Início</a>
+            <a href="{{ url_for('explorar') }}">Explorar</a>
+            <a href="{{ url_for('filtro') }}">Filtros</a>
+            <a href="{{ url_for('favorito') }}">Favoritos</a>
+            <a href="{{ url_for('sobre') }}">Sobre</a>
+            <a href="{{ url_for('ajuda') }}">Ajuda</a>
+            <a href="{{ url_for('suporte') }}">Fale Conosco</a>
             <p class="copy">&copy; CoreMotors</p>
         </nav>
     </aside>
@@ -37,7 +37,7 @@
         <nav class="navbar">
             <h1 id="logo">CoreMotors</h1>
             <div style="display: flex; align-items: center; gap: 15px;">
-                <a class="login" href="login.html">Entrar</a>
+                <a class="login" href="{{ url_for('login') }}">Entrar</a>
                 <button id="openMenu" class="btn-abrir-menu">☰</button>
             </div>
         </nav>
@@ -53,8 +53,8 @@
     <main class="navmain">
         <div class="home-container">
             <div class="main-buttons">
-                <a href="explorar.html" class="btn-explorar">EXPLORAR</a>
-                <a href="filtro.html" class="btn-filtrar">FILTRAR</a>
+                <a href="{{ url_for('explorar') }}" class="btn-explorar">EXPLORAR</a>
+                <a href="{{ url_for('filtro') }}" class="btn-filtrar">FILTRAR</a>
             </div>
         </div>
     </main>
@@ -64,37 +64,37 @@
         <div class="card-carro">
             <h3>Nissan GT-R R35</h3>
             <p class="slogan">Nissan GT-R: Performance que desafia a física, design que define o futuro.</p>
-            <a class="saibamais" href="ficha.html">Saiba Mais</a>
+            <a class="saibamais" href="{{ url_for('ficha') }}">Saiba Mais</a>
         </div>
         
         <div class="card-carro">
             <h3>Toyota Corolla</h3>
             <p class="slogan">O ícone mundial de confiança e durabilidade. União perfeita entre conforto sofisticado e um legado incomparável.</p>
-            <a class="saibamais" href="ficha.html">Saiba Mais</a>
+            <a class="saibamais" href="{{ url_for('ficha') }}">Saiba Mais</a>
         </div>
         
         <div class="card-carro">
             <h3>Bugatti Chiron</h3>
             <p class="slogan">O ápice da engenharia automotiva e do luxo absoluto. Uma obra de arte em movimento que redefine o limite do possível.</p>
-            <a class="saibamais" href="ficha.html">Saiba Mais</a>
+            <a class="saibamais" href="{{ url_for('ficha') }}">Saiba Mais</a>
         </div>
 
         <div class="card-carro">
             <h3>Chevrolet Zafira 2012</h3>
             <p class="slogan">O espaço inteligente que acolhe toda a sua família. Conforto, versatilidade e a robustez de um clássico feito para grandes histórias.</p>
-            <a class="saibamais" href="ficha.html">Saiba Mais</a>
+            <a class="saibamais" href="{{ url_for('ficha') }}">Saiba Mais</a>
         </div>
 
         <div class="card-carro">
             <h3>Nissan Skyline GT-R R34</h3>
             <p class="slogan">O eterno ícone das ruas e das telas. A lenda japonesa que une o domínio tecnológico ao espírito indomável do asfalto.</p>
-            <a class="saibamais" href="ficha.html">Saiba Mais</a>
+            <a class="saibamais" href="{{ url_for('ficha') }}">Saiba Mais</a>
         </div>
 
         <div class="card-carro">
             <h3>Ford Fusion</h3>
             <p class="slogan">A presença marcante de um sedan executivo. Onde o design sofisticado encontra a potência e a tecnologia de um verdadeiro líder.</p>
-            <a class="saibamais" href="ficha.html">Saiba Mais</a>
+            <a class="saibamais" href="{{ url_for('ficha') }}">Saiba Mais</a>
         </div>
     </section>
 

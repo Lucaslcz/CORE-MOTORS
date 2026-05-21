@@ -12,9 +12,33 @@ def ligar_banco():
         database="core_motors"
     )
 
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('index.html')
+
+@app.route('/explorar')
+def explorar():
+    return render_template('explorar.html')
+
+@app.route('/filtro')
+def filtro():
+    return render_template('filtro.html')
+
+@app.route('/favorito')
+def favorito():
+    return render_template('favorito.html')
+
+@app.route('/sobre')
+def sobre():
+    return render_template('sobre.html')
+
+@app.route('/ajuda')
+def ajuda():
+    return render_template('ajuda.html')
+
+@app.route('/suporte')
+def suporte():
+    return render_template('suporte.html')
 
 @app.route('/login')
 def pagina_login():
@@ -23,6 +47,10 @@ def pagina_login():
 @app.route('/cadastro')
 def pagina_cadastro():
     return render_template('cadastro.html')
+
+@app.route('/ficha')
+def ficha():
+    return render_template('ficha.html')
 
 @app.route('/cadastrar', methods=['POST'])
 def cadastrar():
